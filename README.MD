@@ -11,7 +11,7 @@ The project structure is the following:
 
 The site we have to *recreate* was AirBnb search page. The interface was the following :
 
-![AirBnb interface](https://ibb.co/cRL2yp)
+![AirBnb interface](https://i.imgur.com/90qUseg.png)
 
 The main part of the devellopement was about recreating the responsive interface with 3 phases:
 

@@ -57,6 +57,22 @@
                             }
                         }
 
+                        function switchView(test){
+                            var list = $('#listFlat');
+                            var map = $('#mapRow');
+
+                            if(test){
+                                list.removeClass("col-lg-5")
+                                map.removeClass("col-lg-5")
+                                map.addClass("col-lg-10")
+                                list.hide()
+                            } else {
+                                map.removeClass("col-lg-10")
+                                map.addClass("col-lg-5")
+                                list.addClass("col-lg-5")
+                                list.show()                           }
+                        }
+
                     var x = window.matchMedia("(min-width: 992px)")
                     resetShow(x) // Call listener function at run time
                     x.addListener(resetShow) // Attach listener function on state changes 
@@ -65,13 +81,13 @@
                         <div class="row mainrow">
                           <div class="col-lg-2 col-sm-4 ">
                                 <ul class="list-group">
-                                        <li class="list-group-item">
-                                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <li class="list-group-item" id="baseToggle">
+                                                <div class="btn-group btn-group-toggle"  data-toggle="buttons">
                                                         <label class="btn btn-secondary active">
-                                                          <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+                                                          <input type="radio" name="options" id="option1" onchange="switchView(false)" autocomplete="off" checked> List
                                                         </label>
                                                         <label class="btn btn-secondary">
-                                                          <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+                                                          <input type="radio" name="options" id="option2" onchange="switchView(true)" autocomplete="off"> Map
                                                         </label>
                                                       </div>
                                         </li>

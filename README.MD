@@ -21,5 +21,5 @@ The main part of the devellopement was about recreating the responsive interface
 
 The last view may be updated, by adding a button to pop the filters panel rather than displaying it as a single row.
 
-
+![Interface réalisée lors du cours](https://screenshotscdn.firefoxusercontent.com/images/28bfdf48-67c2-4858-9202-955949351137.png)
 

@@ -69,22 +69,43 @@
                         list_toggle.removeClass("active")
                     }
                 }
+                function hideMap(varMap){
+                    if(varMap.matches){
+                        var map = $('#mapRow');
+                        map.hide()
+                    }
+                }
 
             var x = window.matchMedia("(min-width: 992px)")
-            resetShow(x) // Call listener function at run time
-            x.addListener(resetShow) // Attach listener function on state changes 
+            resetShow(x)
+            x.addListener(resetShow) 
+            var mapShowed = window.matchMedia("(max-width: 992px)")
+            hideMap(mapShowed)
+            mapShowed.addListener(hideMap)
         </script>
     </head>
     <body>
             <nav class="navbar navbar-default">
                     <div class="container-fluid">
                       <div class="navbar-header">
-                        <a class="navbar-brand" href="#">Repof-AirBnb</a>
+                        <form class="form-inline">
+                                <a class="navbar-brand" href="#">Repof-AirBnb</a>
+                                <input class="form-control mr-sm-2" type="search" placeholder="&#x1F50D; Nantes" aria-label="Search">
+                        </form>
                       </div>
-                  
+                      
                       <!-- Collect the nav links, forms, and other content for toggling -->
                     </div>
             </nav>
+                <div class="row" id="filter-xs">
+                    <div class="col-xs-1 filter-inline"> filter</div>
+                    <div class="col-xs-1 filter-inline"> filter</div>
+                    <div class="col-xs-1 filter-inline"> filter</div>
+                    <div class="col-xs-1 filter-inline"> filter</div>
+                    <div class="col-xs-1 filter-inline"> filter</div>
+                    <div class="col-xs-1 filter-inline"> filter</div>
+                    <div class="col-xs-1 filter-inline"> filter</div>
+                </div>
                   <div class="container-fluid">
                         <div class="row mainrow">
                           <div class="col-lg-2 col-sm-4 " id="filters">

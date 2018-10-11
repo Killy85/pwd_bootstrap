@@ -1,0 +1,52 @@
+#map {
+    height: 100%;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+   }
+
+
+html,body,.container {
+    height:80vh;
+}
+.container {
+    display:table;
+    width: 80vw;
+    margin-top: 0px;
+    padding: 50px 0 0 0; /*set left/right padding according to needs*/
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
+}
+
+.list-group{
+    min-height: 80vh;
+    height: 90vh;
+    margin-bottom: 10px;
+    overflow-y:scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.list-group-item{
+    min-height: 15%;
+}
+
+.mainrow {
+    height: 100%;
+}
+
+.row .no-float {
+  display: table-cell;
+  overflow-y:scroll;
+  float: none;
+}
+
+#toggleMap{
+    position: fixed;
+    bottom: 40px;
+    right: 60px;
+}
+
+@media only screen and (min-width: 992px) {
+    #toggleMap{
+        display: none;
+    }
+}
